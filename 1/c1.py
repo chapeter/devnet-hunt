@@ -29,11 +29,10 @@ def getAnswer():
     }
 
     response = requests.get(url, headers=headers).json()
-    answer = response["answer"]
+    answer = response["message"]
     submitAnswer(answer, token)
 
     return
 
 
 getAnswer()
-
