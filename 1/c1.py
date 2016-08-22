@@ -29,7 +29,8 @@ def getAnswer():
     }
 
     response = requests.get(url, headers=headers).json()
-    answer = response["message"]
+    for key, value in response.iteritems():
+        answer = value
     submitAnswer(answer, token)
 
     return
