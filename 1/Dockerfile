@@ -1,8 +1,7 @@
 FROM chapeter/alpine
 
 WORKDIR /home
-RUN git clone http://github.com/chapeter/devnet-hunt
-WORKDIR devnet-hunt/1
+ADD . /home/
 
 RUN pip install -r requirements.txt
 

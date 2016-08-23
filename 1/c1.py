@@ -18,7 +18,7 @@ def submitAnswer(answer, token):
     }
 
     response = requests.post(url, data=json.dumps(payload), headers=headers).json()
-    print response
+    #print response
     return response
 
 def getAnswer():
@@ -30,10 +30,10 @@ def getAnswer():
 
     response = requests.get(url, headers=headers).json()
     print response
-    for key, value in response.iteritems():
-        answer = value
-    print answer
-    submitAnswer(answer, token)
+    #for key, value in response.iteritems():
+    #    answer = value
+    #print answer
+    submitAnswer(response, token)
 
     return
 
